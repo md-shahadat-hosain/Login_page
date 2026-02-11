@@ -1,43 +1,23 @@
-<!DOCTYPE HTML>
-<HTML lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Login Page</title>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <body>
-        <div>
-            <from method="POST" actioin="/login">
-                <div> 
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
+    <div class="login-box">
+        <h2>Login</h2>
 
-                </div>
-                <div>
-                    <label for="password" > Password</label>
-                    <input type="password" id="password" name="password" required 
-                                 style="padding-right:35px;">
-                    
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
 
-                            <span onclick="togglepassword()" 
-                                  style="position:absolute; right:1px; top:38px; cursor:pointer;">
-                                👁️
-                           </span>
+        <button onclick="login()">Login</button>
 
-                            
-                </div>
+        <p id="message"></p>
+    </div>
 
-                              <script>
-                                function togglepassword(){
-                                    const p = document.getElementById("password");
-                                    p. type = p.type == "password" ? "text" : "password";
-                                }
-                              </script>
-
-            </from>
-        </div>
-    </body>
-
-
-</HTML>
+    <script src="script.js"></script>
+</body>
+</html>
